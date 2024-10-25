@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class math{
     public static void main (String[] args){
@@ -11,6 +11,7 @@ public class math{
         float divisao;
         float multiplicacao;
         float resto;
+        int opcao;
         
         System.out.print("Digite o primeiro número: ");
         a = input.nextInt();
@@ -29,9 +30,9 @@ public class math{
 
         while (opcao != 0){
 
-            switch opcao{
+            switch (opcao){
                 case 1:
-                    soma = funcoes.adicionar(a,b);
+                    soma = funcoes.soma(a,b);
                     System.out.println(a + " + " b + " = " + soma);
                 break;
 
