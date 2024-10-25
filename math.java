@@ -60,6 +60,16 @@ public class math{
                     opcao = input.nextInt();
                     input.nextLine();
             }
+
+            System.out.println("---------- RESULTADO ----------");
+            System.out.println("1 - Somar");
+            System.out.println("2 - Subtrair");
+            System.out.println("3 - Multiplicar");
+            System.out.println("4 - Dividir");
+            System.out.println("5 - Encontrar o resto da divisão");
+            System.out.println("0 - Sair");
+            opcao = input.nextInt();
+            input.nextLine();  
         }
         System.out.println("Obrigado!");
     }
