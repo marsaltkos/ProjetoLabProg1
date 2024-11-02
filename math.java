@@ -33,27 +33,27 @@ public class math{
             switch (opcao){
                 case 1:
                     soma = funcoes.soma(a,b);
-                    System.out.println(a + " + " b + " = " + soma);
+                    System.out.println(a + " + " + b + " = " + soma);
                 break;
 
                 case 2:
                     subtracao = funcoes.subtracao(a,b);
-                    System.out.println(a + " - " b + " = " + subtracao);
+                    System.out.println(a + " - " + b + " = " + subtracao);
                 break;
 
                 case 3:
                     multiplicacao = funcoes.multiplicacao(a,b);
-                    System.out.println(a + " * " b + " = " + multiplicacao);
+                    System.out.println(a + " * " + b + " = " + multiplicacao);
                 break;
 
                 case 4:
                     divisao = funcoes.divisao(a,b);
-                    System.out.println(a + " / " b + " = " + divisao);
+                    System.out.println(a + " / " + b + " = " + divisao);
                 break;
 
                 case 5:
                     resto = funcoes.resto(a,b);
-                    System.out.println(a + " % " b + " = " + resto);
+                    System.out.println(a + " % " + b + " = " + resto);
                 break;
 
                 default:
