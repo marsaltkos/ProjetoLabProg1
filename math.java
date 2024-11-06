@@ -12,6 +12,8 @@ public class math{
         float multiplicacao;
         float resto;
         int opcao;
+        final String RESULTADO = "---------- RESULTADO ---------------";
+        final String RESULTADOBAIXO = "------------------------------------";
         
         System.out.print("Digite o primeiro número: ");
         a = input.nextFloat();
@@ -34,37 +36,37 @@ public class math{
             switch (opcao){
                 case 1:
                     soma = funcoes.soma(a,b);
-                    System.out.println("---------- RESULTADO ---------------");
+                    System.out.println(RESULTADO);
                     System.out.println(a + " + " + b + " = " + soma);
-                    System.out.println("------------------------------------");
+                    System.out.println(RESULTADOBAIXO);
                 break;
 
                 case 2:
                     subtracao = funcoes.subtracao(a,b);
-                    System.out.println("---------- RESULTADO ---------------");
+                    System.out.println(RESULTADO);
                     System.out.println(a + " - " + b + " = " + subtracao);
-                    System.out.println("------------------------------------");
+                    System.out.println(RESULTADOBAIXO);
                 break;
 
                 case 3:
                     multiplicacao = funcoes.multiplicacao(a,b);
-                    System.out.println("---------- RESULTADO ---------------");
+                    System.out.println(RESULTADO);
                     System.out.println(a + " * " + b + " = " + multiplicacao);
-                    System.out.println("------------------------------------");
+                    System.out.println(RESULTADOBAIXO);
                 break;
 
                 case 4:
                     divisao = funcoes.divisao(a,b);
-                    System.out.println("---------- RESULTADO ---------------");
+                    System.out.println(RESULTADO);
                     System.out.println(a + " / " + b + " = " + divisao);
-                    System.out.println("------------------------------------");
+                    System.out.println(RESULTADOBAIXO);
                 break;
 
                 case 5:
                     resto = funcoes.resto(a,b);
-                    System.out.println("---------- RESULTADO ---------------");
+                    System.out.println(RESULTADO);
                     System.out.println(a + " % " + b + " = " + resto);
-                    System.out.println("------------------------------------");
+                    System.out.println(RESULTADOBAIXO);
                 break;
 
                 case 6:
