@@ -1,10 +1,4 @@
-import java.util.*;
-
-
-
 public class FuncProjeto {
-    
-    Scanner input = new Scanner(System.in);
 
     public static void Cabecalho(){
     System.out.println("***** BEM VINDO *****");
