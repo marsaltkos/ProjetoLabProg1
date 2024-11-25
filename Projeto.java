@@ -16,26 +16,9 @@ public class Projeto{
         do{
             switch(opcao){
                 case 1:
-                    System.out.print("Digite seu usuário: ");
-                    usuario = input.next();
-                    System.out.print("Digite sua senha: ");
-                    senha = input.next();
-                    System.out.print("Digite novamente sua senha: ");
-                    senhaRep = input.next();
-                
-                    if (senha.equals(senhaRep)){
-                        System.out.println("Usuário cadastrado com sucesso!");
-                        FuncProjeto.Cabecalho();
-                        opcao = input.nextInt();
-                    }else{
-                        while(!senhaRep.equals(senha)){
-                        System.out.println("Senha incorreta. Tente novamente: ");
-                        senhaRep = input.next();
-                        }
-                        System.out.println("Usuário cadastrado com sucesso!");  
-                        FuncProjeto.Cabecalho();
-                        opcao = input.nextInt(); 
-                    }
+                    FuncProjeto.Cadastro();
+                    FuncProjeto.Cabecalho();
+                    opcao = input.nextInt();
                 break;
 
                 case 2:
