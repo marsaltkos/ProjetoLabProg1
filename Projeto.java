@@ -60,9 +60,8 @@ public class Projeto{
                     FuncProjeto.Cabecalho();
                     opcao = input.nextInt();
                 break;
-                case 4:
-                    System.out.println("Muito obrigado!");
-                    System.out.println("Saindo...");
+                case 4: 
+                
                 break;
                 default:
                             System.out.println("Opção inválida. Tente novamente.");
@@ -70,6 +69,8 @@ public class Projeto{
                             opcao = input.nextInt();    
             }
         }while(opcao != 4);
+        System.out.println("Muito obrigado!");
+        System.out.println("Saindo...");
     input.close();
     }    
 }
