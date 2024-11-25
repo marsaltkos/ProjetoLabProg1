@@ -13,10 +13,8 @@ public class Projeto{
         FuncProjeto.Cabecalho();
         opcao = input.nextInt();
 
-        while (opcao != 4){
-        
+        do{
             switch(opcao){
-
                 case 1:
                     System.out.print("Digite seu usuário: ");
                     usuario = input.next();
@@ -67,12 +65,10 @@ public class Projeto{
                     System.out.println("Saindo...");
                 break;
                 default:
-                    System.out.println("Opção inválida. Tente novamente.");
-                    FuncProjeto.Cabecalho();
-                    opcao = input.nextInt();
-    
-            }  
-
-        }
-    }
+                            System.out.println("Opção inválida. Tente novamente.");
+                            FuncProjeto.Cabecalho();
+                            opcao = input.nextInt();    
+            }
+        }while(opcao != 4);
+    }    
 }
