@@ -57,8 +57,14 @@ public class Projeto{
                     FuncProjeto.Cabecalho();
                     opcao = input.nextInt();
                 break;    
+                case 3:
+                    FuncProjeto.SobreNos();
+                    FuncProjeto.Cabecalho();
+                    opcao = input.nextInt();
+                break;
     
-            }        
+            }  
+
         }
     }
 }
