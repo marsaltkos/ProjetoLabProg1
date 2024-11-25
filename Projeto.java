@@ -70,5 +70,6 @@ public class Projeto{
                             opcao = input.nextInt();    
             }
         }while(opcao != 4);
+    input.close();
     }    
 }
