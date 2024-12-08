@@ -7,13 +7,9 @@ public class AgendarMudanca
         Scanner dado = new Scanner(System.in);
         String dataa;
         int horario;
-        int ano = 2014;
-        int mes = 5;
-        AnoMes anoMes = AnoMes.of(ano, mes);
         
         //entrada de dados
-        
-        
+
         System.out.println("Escolha uma data para realizar sua mudança. \n Importante: As mudanças só podem ser agendadas entre os dias de segunda-feira a sexta-feira");
         dataa = dado.nextLine();
         System.out.println("Escolha um horário entre 8:00 e 18:00. Digite apenas os primeiros dígitos. Por exemplo, se quiser agendar para as 14:00, digite apenas 14");
