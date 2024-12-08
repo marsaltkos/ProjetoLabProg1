@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class AgendarMudanca
+{
+    public static void main (String[] args)
+    {
+        //declaração de variáveis
+        Scanner dado = new Scanner(System.in);
+        String dataa;
+        int horario;
+        int ano = 2014;
+        int mes = 5;
+        AnoMes anoMes = AnoMes.of(ano, mes);
+        
+        //entrada de dados
+        
+        
+        System.out.println("Escolha uma data para realizar sua mudança. \n Importante: As mudanças só podem ser agendadas entre os dias de segunda-feira a sexta-feira");
+        dataa = dado.nextLine();
+        System.out.println("Escolha um horário entre 8:00 e 18:00. Digite apenas os primeiros dígitos. Por exemplo, se quiser agendar para as 14:00, digite apenas 14");
+        horario = dado.nextInt();
+        while ((horario < 8) || (horario > 18)) {
+            System.out.println("ERRO. Escolha um horário entre 8 e 18");
+            horario = dado.nextInt();
+        }
+
+        //saída de dados
+        System.out.println("Seu agendamento foi solicitado para a data " + dataa + ", às " + horario + ":00 horas");
+        System.out.println("Aguarde a confirmação por e-mail, após verificarmos se não há agendamento prévio, Obrigado.");
+        
+    }
+}
