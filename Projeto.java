@@ -6,12 +6,14 @@ public class Projeto{
         Scanner input = new Scanner(System.in);
         
         int opcao;
+        int opcaoApto;
         String senha;
         String senhaRep = " ";
         String usuario;
 
         FuncProjeto.Cabecalho();
         opcao = input.nextInt();
+        
 
         do{
             switch(opcao){
@@ -26,9 +28,22 @@ public class Projeto{
                     usuario = input.next();
                     System.out.print("Digite sua senha: ");
                     senha = input.next();
+                    System.out.print("Repita sua senha: ");
+                    senhaRep = input.next();
 
                     if (senha.equals(senhaRep)){
                         System.out.println("Usuário validado com sucesso! Seja bem vindo.");
+                        
+                        System.out.println("Selecione uma opção: ");
+                        System.out.println("1 - Acesso a documentos");
+                        opcaoApto = input.nextInt();
+                        switch(opcaoApto){
+                            case 1:
+                                AcessoDocumentos.AcessoDocumentos();
+                            break;
+                            default:
+                                System.out.println("Opção inválida. Tente novamente.");
+                        }
                     }else{
                         while(!senha.equals(senhaRep)){
                             System.out.print("Senha inválida, tente novamente: ");
