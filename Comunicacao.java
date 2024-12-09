@@ -1,7 +1,7 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 public class Comunicacao{
-	public static void main(String[] args) {
+	public static void comunicacao() {
 		Scanner dado = new Scanner(System.in);
 		Random numRamd = new Random();
 		int opcao, protocolo;
