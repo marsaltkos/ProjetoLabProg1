@@ -37,16 +37,25 @@ public class Projeto{
                         System.out.println("Selecione uma opção: ");
                         System.out.println("1 - Acesso a documentos");
                         System.out.println("2 - Acesso a reservas");
-                        System.out.println("4 - Sair");
+                        System.out.println("3 - Acesso a comunicação");
+                        System.out.println("4 - Financeiro");
+                        System.out.println("5 - Sair");
                         opcaoApto = input.nextInt();
-                            while(opcaoApto != 4){
+                            while(opcaoApto != 5){
                                 switch(opcaoApto){
                                     case 1:
                                         AcessoDocumentos.AcessoDocumentos();
                                     break;
                                     case 2:
                                         AgendarMudanca.agendarMudanca();
+                                    break;
+                                    case 3:
+                                        Comunicacao.comunicacao();
+                                    break;
                                     case 4:
+                                        Financeiro.financeiro();
+                                    break;
+                                    case 5:
                                         System.out.println("Você saiu da área do condômino.");
                                     default:
                                         System.out.println("Opção inválida. Tente novamente.");
