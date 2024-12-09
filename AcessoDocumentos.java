@@ -35,6 +35,8 @@ public class AcessoDocumentos
                     balancete = dado.nextInt();
                     System.out.println( "O documento solicitado será enviado via e-mail");
                     break;
+                case "fim":
+                    System.out.println("Obrigado, fim de programa");
                     
                 default:
                     break;
