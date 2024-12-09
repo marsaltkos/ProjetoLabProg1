@@ -36,14 +36,22 @@ public class Projeto{
                         
                         System.out.println("Selecione uma opção: ");
                         System.out.println("1 - Acesso a documentos");
+                        System.out.println("2 - Acesso a reservas");
+                        System.out.println("4 - Sair");
                         opcaoApto = input.nextInt();
-                        switch(opcaoApto){
-                            case 1:
-                                AcessoDocumentos.AcessoDocumentos();
-                            break;
-                            default:
-                                System.out.println("Opção inválida. Tente novamente.");
-                        }
+                            while(opcaoApto != 4){
+                                switch(opcaoApto){
+                                    case 1:
+                                        AcessoDocumentos.AcessoDocumentos();
+                                    break;
+                                    case 2:
+                                        AgendarMudanca.agendarMudanca();
+                                    case 4:
+                                        System.out.println("Você saiu da área do condômino.");
+                                    default:
+                                        System.out.println("Opção inválida. Tente novamente.");
+                                }
+                            }
                     }else{
                         while(!senha.equals(senhaRep)){
                             System.out.print("Senha inválida, tente novamente: ");
