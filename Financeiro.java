@@ -1,7 +1,7 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 public class Financeiro{
-	public static void main(String[] args) {
+	public static void financeiro() {
 		Scanner dado = new Scanner(System.in);
 		Random numRamd = new Random();
 		int opcao, resposta;
