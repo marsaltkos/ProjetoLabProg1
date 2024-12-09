@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AgendarMudanca {
-    public static void main(String[] args) {
+    public static void agendarMudanca() {
         // Declaração de variáveis
         Scanner dado = new Scanner(System.in);
         int mes, ano;
