@@ -1,8 +1,7 @@
 import java.util.Scanner;
 public class AcessoDocumentos
 {
-    public static void main (String[] args)
-    {
+    public static void AcessoDocumentos(){
         //declaração de variáveis
         Scanner dado = new Scanner(System.in);
         String  opcao;
@@ -46,11 +45,11 @@ public class AcessoDocumentos
             dado.nextLine();
             System.out.println("Nessa sessão é possível solicitar o envio de atas e balancetes. Digite qual deles gostaria de acessar ou fim para sair. ");
             opcao = dado.nextLine();
-        }
 
         
         //saída de dados
         System.out.println("Obrigado, fim de programa");
 
+        }
     }
 }
