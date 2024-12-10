@@ -34,28 +34,7 @@ public class FuncProjeto {
         String aptNum = input.nextLine();
         System.out.println("Digite a senha:");
         String senha = input.nextLine();
-        
-        if (isAptNumUsed(aptNum)) {
-            System.out.println("Número do apartamento já está em uso. Tente novamente.");
-        } else {
-            adicionaRegistro(nome, aptNum, senha);
-        }
-    }
-
-    public static boolean isAptNumUsed(String aptNum) {
-        String nomeArquivo = "registros.txt";
-        try (Scanner scanner = new Scanner(new File(nomeArquivo))) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] parts = line.split(",");
-                if (parts.length > 1 && parts[1].trim().equals(aptNum)) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
-        }
-        return false;
+        adicionaRegistro(nome, aptNum, senha);
     }
 
     public static void adicionaRegistro(String nome, String aptNum, String senha) {
