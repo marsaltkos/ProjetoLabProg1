@@ -34,26 +34,30 @@ public class Projeto{
                     if (senha.equals(senhaRep)){
                         System.out.println("Usuário validado com sucesso! Seja bem vindo.");
                         
-                        System.out.println("Selecione uma opção: ");
-                        System.out.println("1 - Acesso a documentos");
-                        System.out.println("2 - Acesso a reservas");
-                        System.out.println("3 - Acesso a comunicação");
-                        System.out.println("4 - Financeiro");
-                        System.out.println("5 - Sair");
+                        FuncProjeto.condomino();
                         opcaoApto = input.nextInt();
+                        
                             while(opcaoApto != 5){
                                 switch(opcaoApto){
                                     case 1:
                                         AcessoDocumentos.AcessoDocumentos();
+                                        FuncProjeto.condomino();
+                                        opcaoApto = input.nextInt();
                                     break;
                                     case 2:
                                         AgendarMudanca.agendarMudanca();
+                                        FuncProjeto.condomino();
+                                        opcaoApto = input.nextInt();
                                     break;
                                     case 3:
                                         Comunicacao.comunicacao();
+                                        FuncProjeto.condomino();
+                                        opcaoApto = input.nextInt();
                                     break;
                                     case 4:
                                         Financeiro.financeiro();
+                                        FuncProjeto.condomino();
+                                        opcaoApto = input.nextInt();
                                     break;
                                     case 5:
                                         System.out.println("Você saiu da área do condômino.");

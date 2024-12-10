@@ -4,16 +4,16 @@ public class Financeiro{
 	public static void financeiro() {
 		Scanner dado = new Scanner(System.in);
 		Random numRamd = new Random();
-		int opcao, resposta;
+		int opcaoFin, resposta;
 		do {
 			System.out.println("***** PORTAL FINANCEIRO *****");
 		    System.out.println("1 - Consultar Débitos:");
 		    System.out.println("2 - 2ª Via de Boletos:");
 		    System.out.println("0 - VOLTAR");
 		    System.out.println("*********************\n");
-		    opcao = dado.nextInt();
+		    opcaoFin = dado.nextInt();
 		    dado.nextLine();
-		    switch (opcao){
+		    switch (opcaoFin){
 		    	case 1:
 		    		System.out.println("\nConsta débitos em seu nome.");
 		    		System.out.println("Por favor, imprima a 2ª Via do Boleto");
@@ -40,10 +40,11 @@ public class Financeiro{
 		    		}
 		    		break;
 		    	case 0:
-		    		break;
+		    		
+				break;
 		    	default:
 		    	System.out.println("\nOpção inválida!\n");
 		    }
-	    }while (opcao != 0);
+	    }while (opcaoFin != 0);
     }
 }

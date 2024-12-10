@@ -67,4 +67,15 @@ public class FuncProjeto {
             System.out.println("Erro ao escrever no arquivo: " + e.getMessage());
         }
     }
+
+    public static void condomino(){
+        int opcaoApto;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Selecione uma opção: ");
+        System.out.println("1 - Acesso a documentos");
+        System.out.println("2 - Acesso a reservas");
+        System.out.println("3 - Acesso a comunicação");
+        System.out.println("4 - Financeiro");
+        System.out.println("5 - Sair");
+    }
 }
