@@ -61,7 +61,9 @@ public class FuncProjeto {
     public static void adicionaRegistro(String nome, String aptNum, String senha) {
         String nomeArquivo = "registros.txt";
         try (PrintWriter writer = new PrintWriter(new FileWriter(nomeArquivo, true))) {
-            writer.println(nome + "," + aptNum + "," + senha);
+            writer.println(nome);
+            writer.println(aptNum);
+            writer.println(senha);
             System.out.println("Registro cadastrado com sucesso!");
         } catch (IOException e) {
             System.out.println("Erro ao escrever no arquivo: " + e.getMessage());
