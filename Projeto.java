@@ -36,6 +36,11 @@ public class Projeto {
 
                     System.out.print("Digite sua senha: ");
                     senha = input.next();
+
+                    while (!senhaExiste(senha)) {
+                        System.out.println("Senha incorreta!");
+                        senha = input.next();
+                    }
                     System.out.print("Repita sua senha: ");
                     senhaRep = input.next();
 
@@ -105,6 +110,19 @@ public class Projeto {
             String linha;
             while ((linha = br.readLine()) != null) {
                 if (linha.trim().equals(usuario)) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
+        }
+        return false;
+    }
+    private static boolean senhaExiste(String senha) {
+        try (BufferedReader br = new BufferedReader(new FileReader("registros.txt"))) {
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                if (linha.trim().equals(senha)) {
                     return true;
                 }
             }
