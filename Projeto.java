@@ -29,7 +29,7 @@ public class Projeto {
                     System.out.print("Digite seu usuário: ");
                     usuario = input.next();
 
-                    if (!usuarioExiste(usuario)) {
+                    if (!FuncProjeto.usuarioExiste(usuario)) {
                         System.out.println("Usuário não encontrado!");
                         break;
                     }
@@ -37,8 +37,9 @@ public class Projeto {
                     System.out.print("Digite sua senha: ");
                     senha = input.next();
 
-                    while (!senhaExiste(senha)) {
+                    while (!(FuncProjeto.senhaExiste(senha))) {
                         System.out.println("Senha incorreta!");
+                        System.out.print("Digite sua senha: ");
                         senha = input.next();
                     }
                     System.out.print("Repita sua senha: ");
@@ -103,32 +104,5 @@ public class Projeto {
         System.out.println("Muito obrigado!");
         System.out.println("Saindo...");
         input.close();
-    }
-
-    private static boolean usuarioExiste(String usuario) {
-        try (BufferedReader br = new BufferedReader(new FileReader("registros.txt"))) {
-            String linha;
-            while ((linha = br.readLine()) != null) {
-                if (linha.trim().equals(usuario)) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
-        }
-        return false;
-    }
-    private static boolean senhaExiste(String senha) {
-        try (BufferedReader br = new BufferedReader(new FileReader("registros.txt"))) {
-            String linha;
-            while ((linha = br.readLine()) != null) {
-                if (linha.trim().equals(senha)) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
-        }
-        return false;
     }
 }
