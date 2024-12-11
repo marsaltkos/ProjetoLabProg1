@@ -18,6 +18,7 @@ public class AtualizarCadastro
             System.out.println(" Opção 1: cadastrar dados completos de novo morador \n Opção 2: cadastrar apenas novo veículo \n Opção 3: Excluir morador do sistema \n Escolha uma opção de 1 a 3: ");
             opcao = dado.nextInt();
             dado.nextLine();
+            
             while((opcao!=1)&&(opcao!=2)&&(opcao!=3)) {
                 System.out.println("ERRO. Digite 1, 2 ou 3:");
                 opcao = dado.nextInt();
