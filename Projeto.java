@@ -51,34 +51,36 @@ public class Projeto {
                         FuncProjeto.condomino();
                         opcaoApto = input.nextInt();
 
-                        while (opcaoApto != 5) {
+                        while (opcaoApto != 6) { // Alterado para 6, pois adicionamos uma nova opção
                             switch (opcaoApto) {
                                 case 1:
                                     AcessoDocumentos.AcessoDocumentos();
-                                    FuncProjeto.condomino();
-                                    opcaoApto = input.nextInt();
                                     break;
                                 case 2:
                                     AgendarMudanca.agendarMudanca();
-                                    FuncProjeto.condomino();
-                                    opcaoApto = input.nextInt();
                                     break;
                                 case 3:
                                     Comunicacao.comunicacao();
-                                    FuncProjeto.condomino();
-                                    opcaoApto = input.nextInt();
                                     break;
                                 case 4:
                                     Financeiro.financeiro();
-                                    FuncProjeto.condomino();
-                                    opcaoApto = input.nextInt();
                                     break;
                                 case 5:
-
-                                break;
+                                    ReservaAreaLazer.reservarAreaLazer(input); // Novo caso adicionado
+                                    break;
+                                case 6:
+                                    System.out.println("Você saiu da área do condômino.");
+                                    break;
                                 default:
                                     System.out.println("Opção inválida. Tente novamente.");
                             }
+                            if (opcaoApto != 6) {
+                                FuncProjeto.condomino();
+                                opcaoApto = input.nextInt();
+                            }
+                        
+
+                          
                         }
                         System.out.println("Você saiu da área do condômino.");
                     } else {
@@ -105,4 +107,5 @@ public class Projeto {
         System.out.println("Saindo...");
         input.close();
     }
+    
 }

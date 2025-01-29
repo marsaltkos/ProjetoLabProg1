@@ -51,16 +51,18 @@ public class FuncProjeto {
         }
     }
 
-    public static void condomino(){
-        int opcaoApto;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Selecione uma opção: ");
-        System.out.println("1 - Acesso a documentos");
-        System.out.println("2 - Acesso a reservas");
-        System.out.println("3 - Acesso a comunicação");
+    public static void condomino() {
+        System.out.println("\nEscolha uma opção:");
+        System.out.println("1 - Acesso a Documentos");
+        System.out.println("2 - Agendar Mudança");
+        System.out.println("3 - Comunicação");
         System.out.println("4 - Financeiro");
-        System.out.println("5 - Sair");
+        System.out.println("5 - Reserva de Área de Lazer"); // Nova opção adicionada
+        System.out.println("6 - Sair");
+        System.out.print("Digite sua opção: ");
     }
+
+    
 
     public static boolean usuarioExiste(String usuario) {
         try (BufferedReader br = new BufferedReader(new FileReader("registros.txt"))) {
